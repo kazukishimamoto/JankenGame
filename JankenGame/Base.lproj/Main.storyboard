@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VdD-RL-siC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VdD-RL-siC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ジャンケンゲーム！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-aj-lV6">
                                 <rect key="frame" x="47" y="460" width="282" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.99942404029999998" green="0.99342802982138234" blue="0.02555265521312098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDP-N1-hLj">
@@ -35,20 +35,50 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="スタート">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.7803921568627451" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqV-lh-JpP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af1-vi-qIl">
+                                <rect key="frame" x="0.0" y="390" width="139.5" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Su6-1C-1ou"/>
+                                </constraints>
+                                <state key="normal" image="gu_kai"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCM-p7-NRN">
+                                <rect key="frame" x="235.5" y="390" width="139.5" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3wJ-1M-4nM"/>
+                                </constraints>
+                                <state key="normal" image="pa_kai"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hG2-ec-IRp">
+                                <rect key="frame" x="140" y="390" width="96" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ui2-ca-TrG"/>
+                                </constraints>
+                                <state key="normal" image="choki_kai"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mCM-p7-NRN" firstAttribute="leading" secondItem="hG2-ec-IRp" secondAttribute="trailing" id="6gA-Pj-3Yg"/>
                             <constraint firstItem="VdD-RL-siC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8H6-Dv-iWn"/>
+                            <constraint firstItem="af1-vi-qIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYG-As-Wcd"/>
                             <constraint firstItem="xDP-N1-hLj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E2v-BL-9tN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mCM-p7-NRN" secondAttribute="trailing" id="MhV-iM-ill"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xDP-N1-hLj" secondAttribute="bottom" id="Pzh-8u-4Mp"/>
+                            <constraint firstItem="hG2-ec-IRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rdq-1a-Ied"/>
+                            <constraint firstItem="af1-vi-qIl" firstAttribute="top" secondItem="VdD-RL-siC" secondAttribute="bottom" id="TgR-cx-31y"/>
+                            <constraint firstItem="ny9-aj-lV6" firstAttribute="top" secondItem="af1-vi-qIl" secondAttribute="bottom" id="eWk-ki-L9R"/>
                             <constraint firstItem="ny9-aj-lV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gES-Kp-nOO"/>
                             <constraint firstItem="xDP-N1-hLj" firstAttribute="top" secondItem="ny9-aj-lV6" secondAttribute="bottom" constant="70" id="iAN-Dv-BDo"/>
+                            <constraint firstItem="ny9-aj-lV6" firstAttribute="top" secondItem="mCM-p7-NRN" secondAttribute="bottom" id="pNz-FA-Mq8"/>
+                            <constraint firstItem="hG2-ec-IRp" firstAttribute="leading" secondItem="af1-vi-qIl" secondAttribute="trailing" id="rWC-bR-KVl"/>
+                            <constraint firstItem="ny9-aj-lV6" firstAttribute="top" secondItem="hG2-ec-IRp" secondAttribute="bottom" id="v39-Dg-kdE"/>
                             <constraint firstItem="VdD-RL-siC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="weP-ly-oY6"/>
                             <constraint firstItem="xDP-N1-hLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="whf-Sh-p22"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xDP-N1-hLj" secondAttribute="trailing" id="xy5-1m-2wU"/>
@@ -66,4 +96,9 @@
             <point key="canvasLocation" x="36" y="32.833583208395808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="choki_kai" width="90" height="113"/>
+        <image name="gu_kai" width="94" height="87"/>
+        <image name="pa_kai" width="98" height="107"/>
+    </resources>
 </document>
