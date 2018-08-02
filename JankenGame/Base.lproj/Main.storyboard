@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VdD-RL-siC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="390"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ジャンケンゲーム！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-aj-lV6">
-                                <rect key="frame" x="47" y="460" width="282" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ジャンケンゲーム！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny9-aj-lV6">
+                                <rect key="frame" x="78" y="538" width="219" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.99942404029999998" green="0.99342802982138234" blue="0.02555265521312098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -38,29 +38,38 @@
                                     <color key="titleColor" red="0.7803921568627451" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uqV-lh-JpP"/>
+                                    <action selector="jankenStartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z16-c0-5Cj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af1-vi-qIl">
-                                <rect key="frame" x="0.0" y="390" width="139.5" height="70"/>
+                                <rect key="frame" x="0.0" y="468" width="139.5" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Su6-1C-1ou"/>
                                 </constraints>
                                 <state key="normal" image="gu_kai"/>
+                                <connections>
+                                    <action selector="selectGuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Yc-WT-Ojy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCM-p7-NRN">
-                                <rect key="frame" x="235.5" y="390" width="139.5" height="70"/>
+                                <rect key="frame" x="235.5" y="468" width="139.5" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="3wJ-1M-4nM"/>
                                 </constraints>
                                 <state key="normal" image="pa_kai"/>
+                                <connections>
+                                    <action selector="selectPaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IST-gb-SHg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hG2-ec-IRp">
-                                <rect key="frame" x="140" y="390" width="96" height="70"/>
+                                <rect key="frame" x="140" y="468" width="96" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="ui2-ca-TrG"/>
                                 </constraints>
                                 <state key="normal" image="choki_kai"/>
+                                <connections>
+                                    <action selector="selectChokiButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WWZ-IV-X1o"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,7 +84,7 @@
                             <constraint firstItem="af1-vi-qIl" firstAttribute="top" secondItem="VdD-RL-siC" secondAttribute="bottom" id="TgR-cx-31y"/>
                             <constraint firstItem="ny9-aj-lV6" firstAttribute="top" secondItem="af1-vi-qIl" secondAttribute="bottom" id="eWk-ki-L9R"/>
                             <constraint firstItem="ny9-aj-lV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gES-Kp-nOO"/>
-                            <constraint firstItem="xDP-N1-hLj" firstAttribute="top" secondItem="ny9-aj-lV6" secondAttribute="bottom" constant="70" id="iAN-Dv-BDo"/>
+                            <constraint firstItem="xDP-N1-hLj" firstAttribute="top" secondItem="ny9-aj-lV6" secondAttribute="bottom" id="iAN-Dv-BDo"/>
                             <constraint firstItem="ny9-aj-lV6" firstAttribute="top" secondItem="mCM-p7-NRN" secondAttribute="bottom" id="pNz-FA-Mq8"/>
                             <constraint firstItem="hG2-ec-IRp" firstAttribute="leading" secondItem="af1-vi-qIl" secondAttribute="trailing" id="rWC-bR-KVl"/>
                             <constraint firstItem="ny9-aj-lV6" firstAttribute="top" secondItem="hG2-ec-IRp" secondAttribute="bottom" id="v39-Dg-kdE"/>
@@ -89,6 +98,10 @@
                     <connections>
                         <outlet property="answerImageView" destination="VdD-RL-siC" id="chV-C6-VVM"/>
                         <outlet property="answerLabel" destination="ny9-aj-lV6" id="7mM-tF-hQU"/>
+                        <outlet property="chokiButton" destination="hG2-ec-IRp" id="WNk-uL-Tcg"/>
+                        <outlet property="guButton" destination="af1-vi-qIl" id="sEj-T4-haJ"/>
+                        <outlet property="paButton" destination="mCM-p7-NRN" id="Dz7-av-Yel"/>
+                        <outlet property="startButton" destination="xDP-N1-hLj" id="avf-bv-tEa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
