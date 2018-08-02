@@ -27,18 +27,19 @@ class ViewController: UIViewController {
     var answerNumber = 0
     
     @IBAction func shuffleAction(_ sender: Any) {
+        // 0, 1, 2の数値をランダムに算出
+        answerNumber = Int(arc4random_uniform(3))
+        
         if answerNumber == 0{
             answerImageView.image = UIImage(named: "gu_kai")
             answerLabel.text = "ぐー！"
         } else if answerNumber == 1 {
             answerImageView.image = UIImage(named: "choki_kai")
             answerLabel.text = "ちょき！"
-        } else {
+        } else if answerNumber == 2{
             answerImageView.image = UIImage(named: "pa_kai")
             answerLabel.text = "ぱー"
         }
-        
-        answerNumber = answerNumber + 1
     }
 }
 
