@@ -23,9 +23,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var answerImageView: UIImageView!
     @IBOutlet weak var answerLabel: UILabel!
+    
+    var answerNumber = 0
+    
     @IBAction func shuffleAction(_ sender: Any) {
-        answerImageView.image = UIImage(named: "gu_kai")
-        answerLabel.text = "ぐー！"
+        if answerNumber == 0{
+            answerImageView.image = UIImage(named: "gu_kai")
+            answerLabel.text = "ぐー！"
+        } else if answerNumber == 1 {
+            answerImageView.image = UIImage(named: "choki_kai")
+            answerLabel.text = "ちょき！"
+        } else {
+            answerImageView.image = UIImage(named: "pa_kai")
+            answerLabel.text = "ぱー"
+        }
+        
+        answerNumber = answerNumber + 1
     }
 }
 
